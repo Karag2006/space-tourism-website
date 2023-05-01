@@ -1,16 +1,35 @@
 :root {
     /* FONTS */
+    @font-face {
+        font-family: "Barlow";
+        src: url("/public/fonts/Barlow-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Barlow Condensed";
+        src: url("/public/fonts/BarlowCondensed-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Bellefair";
+        src: url("/public/fonts/Bellefair-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+    }
 
-    --font-family-primary: "Lexend Deca", sans-serif;
-    --font-family-secondary: "Big Schoulders Display", cursive;
+    --font-family-primary: "Barlow", sans-serif;
+    --font-family-secondary: "Barlow Condensed", sans-serif;
+    --font-family-special: "Bellefair", cursive;
 
-    --font-color: black;
-    --font-color-secondary: var(--clr-neutral-200);
+    --font-color: var(--clr-neutral-100);
+    --font-color-secondary: var(--clr-primary);
     --font-color-error: crimson;
 
     --font-size: var(--fs-400);
 
-    --background-color: var(--clr-neutral-200);
+    --background-color: var(--clr-secondary);
 }
 
 *,
