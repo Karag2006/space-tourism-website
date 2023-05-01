@@ -1,0 +1,67 @@
+:root {
+    /* CUSTOM PROPERTIES */
+    /* Project Values */
+
+    --alpha: 0.75;
+    --fs-default: 15px;
+
+    /* Colors */
+    /* Primaries */
+    --hsl-clr-primary: 31, 77%, 52%;
+    --hsl-clr-secondary: 184, 100%, 22%;
+    --hsl-clr-secondary-dark: 179, 100%, 13%;
+
+    /* Neutrals */
+    --hsl-clr-neutral-100: 0, 0%, 100%;
+    --hsl-clr-neutral-200: 0, 0%, 95%;
+    --hsl-clr-neutral-400: 224, 23%, 55%;
+    --hsl-clr-neutral-600: 223, 47%, 23%;
+    --hsl-clr-neutral-800: 216, 12%, 8%;
+    --hsl-clr-neutral-900: 216, 12%, 5%;
+
+    --hsl-clr-attribution: 0, 0%, 0%;
+    --hsl-clr-attribution-link: 228, 45%, 74%;
+    --alpha-attribution: 0.75;
+
+    /* Directly usable color Definitions */
+    --clr-primary: hsl(var(--hsl-clr-primary));
+    --clr-secondary: hsl(var(--hsl-clr-secondary));
+    --clr-secondary-dark: hsl(var(--hsl-clr-secondary-dark));
+    --clr-neutral-100: hsl(var(--hsl-clr-neutral-100));
+    --clr-neutral-200: hsl(var(--hsl-clr-neutral-200));
+    --clr-neutral-400: hsl(var(--hsl-clr-neutral-400));
+    --clr-neutral-600: hsl(var(--hsl-clr-neutral-600));
+    --clr-neutral-800: hsl(var(--hsl-clr-neutral-800));
+    --clr-neutral-900: hsl(var(--hsl-clr-neutral-900));
+
+    --clr-neutral-100-alpha: hsla(var(--hsl-clr-neutral-100), var(--alpha));
+
+    --clr-attribution: hsla(
+        var(--hsl-clr-attribution),
+        var(--alpha-attribution)
+    );
+    --clr-attribution-link: hsl(var(--hsl-clr-attribution-link));
+
+    /* Typography */
+    --fw-thin: 100;
+    --fw-extra-light: 200;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+    --fw-black: 900;
+
+    --fs-100: 0.3em;
+    --fs-200: 0.5em;
+    --fs-300: 0.75em;
+    --fs-400: var(--fs-default);
+    --fs-500: 1.125em;
+    --fs-600: 1.25em;
+    --fs-700: 1.5em;
+    --fs-800: 1.75em;
+    --fs-900: 2em;
+
+    --fs-attribution: 11px;
+}
