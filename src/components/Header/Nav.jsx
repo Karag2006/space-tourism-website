@@ -15,9 +15,9 @@ const Nav = () => {
                     </Link>
                 </li>
                 <li>
-                    <a href=''>
+                    <Link to='/crew'>
                         <span>02</span> Crew
-                    </a>
+                    </Link>
                 </li>
                 <li>
                     <a href=''>

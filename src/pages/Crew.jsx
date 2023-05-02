@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { destinations } from "../assets/data/data.json";
-import { TextSection, ImageSection, Distance } from "../components";
+import { crew } from "../assets/data/data.json";
+import { TextSection, ImageSection } from "../components";
 
 const Destination = () => {
     const [activeLink, setActiveLink] = useState(0);
-    const linkItems = destinations.map((element) => {
+    const linkItems = crew.map((element) => {
         const activeClass = element.id == activeLink ? "active" : "";
         return (
             <li key={element.id}>
@@ -20,22 +20,14 @@ const Destination = () => {
     return (
         <>
             <h5>
-                <span>01</span> Pick your Destination
+                <span>02</span> Meet your Crew
             </h5>
-            <ImageSection
-                type='destination'
-                images={destinations[activeLink].images}
-            />
-            <section className='destination--links'>
+            <ImageSection type='crew' images={crew[activeLink].images} />
+            <section className='crew--links'>
                 <ul>{linkItems}</ul>
             </section>
 
-            <TextSection
-                element={destinations[activeLink]}
-                type='destination'
-            />
-
-            <Distance element={destinations[activeLink]} />
+            <TextSection element={crew[activeLink]} type='crew' />
         </>
     );
 };
