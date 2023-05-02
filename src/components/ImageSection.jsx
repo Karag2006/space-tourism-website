@@ -1,9 +1,12 @@
 const ImageSection = ({ images, type }) => {
-    return (
-        <section className={type + "--image"}>
+    const image =
+        type == "technology" ? (
+            <img src={images.portrait} alt='' />
+        ) : (
             <img src={images.webp} alt='' />
-        </section>
-    );
+        );
+
+    return <section className={type + "--image"}>{image}</section>;
 };
 
 export default ImageSection;

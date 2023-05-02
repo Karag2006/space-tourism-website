@@ -7,7 +7,7 @@ const Destination = () => {
     const linkItems = destinations.map((element) => {
         const activeClass = element.id == activeLink ? "active" : "";
         return (
-            <li key={element.id}>
+            <li key={element.id} className='navText'>
                 <button
                     className={activeClass}
                     onClick={() => setActiveLink(element.id)}

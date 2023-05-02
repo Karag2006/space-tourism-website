@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, Destination, Crew } from "../pages";
+import { Home, Destination, Crew, Technology } from "../pages";
 import Layout from "../Layout.jsx";
 
 export const router = createBrowserRouter([
@@ -18,6 +18,10 @@ export const router = createBrowserRouter([
             {
                 path: "crew",
                 element: <Crew />,
+            },
+            {
+                path: "technology",
+                element: <Technology />,
             },
         ],
     },

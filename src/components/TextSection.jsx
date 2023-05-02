@@ -11,6 +11,14 @@ const TextSection = ({ element, type }) => {
             </>
         );
     }
+    if (type == "technology") {
+        sectionHeader = (
+            <>
+                <p className='navText'>the Terminology...</p>
+                <h3>{element.name}</h3>
+            </>
+        );
+    }
     return (
         <section className={type + "--text"}>
             {sectionHeader}

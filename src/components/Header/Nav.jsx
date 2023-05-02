@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Nav = () => {
     return (
         <nav>
-            <ul>
+            <ul className='navText'>
                 <li>
                     <Link to={"/"}>
                         <span>00</span> Home
@@ -20,9 +20,9 @@ const Nav = () => {
                     </Link>
                 </li>
                 <li>
-                    <a href=''>
+                    <Link to='/technology'>
                         <span>03</span> Technology
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </nav>
