@@ -1,0 +1,32 @@
+@use "@/public/assets/scss/imports/mixins" as *;
+
+.numbered-indicators {
+    --gap: 1.5rem;
+    --direction: column;
+    & > * {
+        place-content: center;
+        place-items: center;
+        border: 2px solid hsl(var(--hsl-clr-white) / 0.17);
+        border-radius: 50%;
+        width: 2.5rem;
+        padding: 0;
+        aspect-ratio: 1;
+        background-color: transparent;
+        cursor: pointer;
+
+        @include breakpoint-tablet {
+            width: 3.75rem;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: hsl(var(--hsl-clr-white) / 0.5);
+        }
+
+        &.active,
+        &[aria-selected="true"] {
+            background-color: hsl(var(--hsl-clr-white) / 1);
+            color: var(--clr-dark);
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@use "@/public/assets/scss/imports/mixins" as *;
+
+.logo {
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.mobile-nav-toggle {
+    display: block;
+
+    position: absolute;
+    z-index: 20;
+    right: 1rem;
+    top: 3rem;
+
+    width: 1.5rem;
+    aspect-ratio: 1;
+
+    background: transparent;
+    background-image: url("/assets/images/shared/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: 0;
+
+    cursor: pointer;
+
+    &[aria-expanded="true"] {
+        background-image: url("/assets/images/shared/icon-close.svg");
+    }
+
+    @include breakpoint-tablet {
+        display: none;
+    }
+}
+
+@include breakpoint-desktop {
+    .primary-header {
+        align-items: center;
+
+        margin-block-start: 2rem;
+        &::after {
+            content: "";
+            display: block;
+            position: relative;
+            z-index: 20;
+            height: 1px;
+            width: 100%;
+            margin-right: -2.5rem;
+            background: hsl(var(--hsl-clr-white) / 0.25);
+            order: 1;
+        }
+
+        nav {
+            order: 2;
+        }
+    }
+}

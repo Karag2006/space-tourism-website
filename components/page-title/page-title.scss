@@ -1,0 +1,12 @@
+@use "@/public/assets/scss/imports/mixins" as *;
+
+.page-title {
+    span {
+        margin-inline-end: 1.125rem;
+        color: hsl(var(--hsl-clr-white) / 0.25);
+
+        @include breakpoint-desktop {
+            margin-inline-end: 1.75rem;
+        }
+    }
+}

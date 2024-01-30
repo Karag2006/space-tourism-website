@@ -1,0 +1,72 @@
+.color-example {
+    padding: 3rem 1rem 1rem;
+    border: 1px solid white;
+}
+
+#colors .flex {
+    --gap: 5rem;
+    margin-block-start: 2rem;
+
+    .color-definition {
+        width: 100%;
+    }
+}
+
+#typography {
+    margin: 4rem 0;
+
+    .col {
+        --flow-space: 4rem;
+        width: 100%;
+    }
+}
+
+#interactive-elements {
+    .container {
+        --gap: 16rem;
+    }
+    .primary-navigation {
+        --gap: 8rem;
+        --underline-gap: 2rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+
+            span {
+                font-weight: var(--fw-bold);
+                margin-inline-end: 0.5em;
+            }
+        }
+    }
+
+    .left {
+        margin-block-start: 5rem;
+    }
+
+    .right {
+        --gap: 8rem;
+        --direction: column;
+        align-items: center;
+    }
+
+    .tabs {
+        --gap: 2rem;
+        --direction: row;
+        button {
+            --underline-gap: 0.5em;
+            background: transparent;
+
+            &.active {
+                color: var(--clr-white);
+            }
+        }
+    }
+}
+
+.page-end {
+    margin-block-start: 5rem;
+    margin-block-end: 25vh;
+}

@@ -1,0 +1,22 @@
+.dot-indicators {
+    --gap: 1.5rem;
+    --direction: row;
+    & > * {
+        border: none;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        padding: 0.5em;
+        background-color: hsl(var(--hsl-clr-white) / 0.17);
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background-color: hsl(var(--hsl-clr-white) / 0.5);
+        }
+
+        &.active,
+        &[aria-selected="true"] {
+            background-color: hsl(var(--hsl-clr-white) / 1);
+        }
+    }
+}

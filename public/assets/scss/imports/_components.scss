@@ -1,0 +1,44 @@
+/*  Styles / classes used by multiple components        */
+/*  too complex for utility classes but should          */
+/*  be declared globaly instead of component specific   */
+
+.numbered-title {
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-500);
+    letter-spacing: 4.72px;
+    text-transform: uppercase;
+
+    span {
+        margin-inline-end: 0.5em;
+        font-weight: var(--fw-bold);
+        color: hsl(var(--hsl-clr-white) / 0.25);
+    }
+}
+
+.underline-indicators > * {
+    border: 0;
+    border-bottom: 0.2rem solid hsl(var(--hsl-clr-white) / 0);
+    padding-block: var(--underline-gap, 1em);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border-color: hsl(var(--hsl-clr-white) / 0.5);
+    }
+
+    &:has(a:focus),
+    &:has(button:focus) {
+        border-color: hsl(var(--hsl-clr-white) / 0.5);
+    }
+
+    a:focus {
+        outline: none;
+    }
+
+    &.active,
+    &[aria-selected="true"] {
+        color: hsl(var(--hsl-clr-white) / 1);
+        border-color: hsl(var(--hsl-clr-white) / 1);
+    }
+}

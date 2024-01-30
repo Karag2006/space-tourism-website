@@ -1,0 +1,71 @@
+@use "@/public/assets/scss/imports/mixins" as *;
+
+.primary-navigation {
+    --gap: clamp(1.5rem, 5vw, 3.5rem);
+    --underline-gap: 0.5rem;
+    --direction: column;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    background: hsl(var(--hsl-clr-dark) / 0.95);
+
+    @supports (backdrop-filter: blur(1.5rem)) {
+        background: hsl(var(--hsl-clr-white) / 0.05);
+        backdrop-filter: blur(1.5rem);
+    }
+
+    @supports (-webkit-backdrop-filter: blur(1.5rem)) {
+        background: hsl(var(--hsl-clr-white) / 0.05);
+        -webkit-backdrop-filter: blur(1.5rem);
+    }
+
+    @include breakpoint-tablet {
+        --direction: row;
+        --underline-gap: 2rem;
+
+        padding-inline: clamp(3rem, 7vw, 7rem);
+    }
+
+    @include breakpoint-desktop {
+    }
+
+    a {
+        text-decoration: none;
+
+        span {
+            font-weight: var(--fw-bold);
+            margin-inline-end: 1em;
+            @include breakpoint-tablet {
+                display: none;
+            }
+
+            @include breakpoint-desktop {
+                display: inline;
+            }
+        }
+    }
+}
+
+@media (max-width: 35rem) {
+    .primary-navigation {
+        position: fixed;
+        inset: 0 0 0 40%;
+        z-index: 10;
+
+        padding: min(20rem, 15vh) 2rem;
+
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+
+        &.menu-open {
+            transform: translateX(0%);
+        }
+
+        &.underline-indicators > .active {
+            border: 0;
+        }
+    }
+}

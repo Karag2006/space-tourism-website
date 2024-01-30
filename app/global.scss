@@ -1,0 +1,129 @@
+@use "@/public/assets/scss/imports/" as *;
+
+.main-container {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+
+    min-height: 100%;
+
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.skip-to-content {
+    position: absolute;
+    z-index: 100;
+    padding: 0.5em 1em;
+    background: var(--clr-white);
+    color: var(--clr-dark);
+    text-decoration: none;
+    margin-inline: auto;
+    transform: translateY(-100%);
+    transition: transform 250ms ease-in;
+
+    &:focus {
+        transform: translateY(0);
+    }
+}
+
+.home {
+    background-image: url("/assets/images/home/background-home-mobile.jpg");
+
+    @include breakpoint-tablet {
+        background-image: url("/assets/images/home/background-home-tablet.jpg");
+    }
+
+    @include breakpoint-desktop {
+        background-image: url("/assets/images/home/background-home-desktop.jpg");
+    }
+}
+
+.destination {
+    background-image: url("/assets/images/destination/background-destination-mobile.jpg");
+
+    @include breakpoint-tablet {
+        background-image: url("/assets/images/destination/background-destination-tablet.jpg");
+    }
+
+    @include breakpoint-desktop {
+        background-image: url("/assets/images/destination/background-destination-desktop.jpg");
+    }
+}
+
+.crew {
+    background-image: url("/assets/images/crew/background-crew-mobile.jpg");
+
+    @include breakpoint-tablet {
+        background-image: url("/assets/images/crew/background-crew-tablet.jpg");
+    }
+
+    @include breakpoint-desktop {
+        background-image: url("/assets/images/crew/background-crew-desktop.jpg");
+    }
+}
+
+.technology {
+    background-image: url("/assets/images/technology/background-technology-mobile.jpg");
+
+    @include breakpoint-tablet {
+        background-image: url("/assets/images/technology/background-technology-tablet.jpg");
+    }
+
+    @include breakpoint-desktop {
+        background-image: url("/assets/images/technology/background-technology-desktop.jpg");
+    }
+}
+
+.grid-container {
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    padding-inline: 1rem;
+    padding-block-end: 3rem;
+
+    text-align: center;
+
+    p:not([class]) {
+        max-width: 50ch;
+        color: var(--clr-accent);
+    }
+    @include breakpoint-desktop {
+        column-gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(
+                1rem,
+                1fr
+            );
+        text-align: left;
+    }
+}
+
+.numbered-title {
+    grid-area: title;
+
+    @include breakpoint-tablet {
+        justify-self: start;
+        margin-block-start: 2rem;
+    }
+}
+
+.attribution {
+    padding: 1rem;
+
+    place-content: center;
+    background: hsl(var(--hsl-clr-dark) / 0.95);
+
+    @supports (backdrop-filter: blur(1.5rem)) {
+        background: hsl(var(--hsl-clr-white) / 0.05);
+        backdrop-filter: blur(1.5rem);
+    }
+
+    @supports (-webkit-backdrop-filter: blur(1.5rem)) {
+        background: hsl(var(--hsl-clr-white) / 0.05);
+        -webkit-backdrop-filter: blur(1.5rem);
+    }
+
+    a {
+        color: var(--clr-accent);
+    }
+}

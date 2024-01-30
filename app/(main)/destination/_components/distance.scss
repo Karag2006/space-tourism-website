@@ -1,0 +1,27 @@
+@use "@/public/assets/scss/imports/mixins" as *;
+
+.distance-container {
+    --gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding-top: 2rem;
+
+    border-top: 1px solid hsl(var(--hsl-clr-white) / 0.25);
+
+    p {
+        font-size: 1.75rem;
+    }
+
+    @include breakpoint-tablet {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    @include breakpoint-desktop {
+        --gap: min(8vw, 6rem);
+        justify-content: flex-start;
+        text-align: left;
+    }
+}

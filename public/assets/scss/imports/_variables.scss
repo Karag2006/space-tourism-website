@@ -1,0 +1,88 @@
+@use "@/public/assets/scss/imports/mixins" as *;
+
+/* CUSTOM PROPERTIES */
+:root {
+    /* Project Values */
+    --alpha: 0.75;
+    --fs-default: 1.125rem;
+
+    /* Colors */
+    /* Primaries */
+    --hsl-clr-accent: 231 77% 90%;
+    --hsl-clr-dark: 230 35% 7%;
+    --hsl-clr-white: 0 0% 100%;
+
+    /* Neutrals */
+    --hsl-clr-neutral-100: 0 0% 100%;
+    --hsl-clr-neutral-200: 0 0% 95%;
+    --hsl-clr-neutral-400: 224 23% 55%;
+    --hsl-clr-neutral-600: 223 47% 23%;
+    --hsl-clr-neutral-800: 216 12% 8%;
+    --hsl-clr-neutral-900: 216 12% 5%;
+
+    --hsl-clr-attribution: 0 0% 0%;
+    --hsl-clr-attribution-link: 228 45% 74%;
+    --alpha-attribution: 0.75;
+
+    /* Directly usable color Definitions */
+    --clr-accent: hsl(var(--hsl-clr-accent));
+    --clr-dark: hsl(var(--hsl-clr-dark));
+    --clr-white: hsl(var(--hsl-clr-white));
+
+    /* Neutrals */
+    --clr-neutral-100: hsl(var(--hsl-clr-neutral-100));
+    --clr-neutral-200: hsl(var(--hsl-clr-neutral-200));
+    --clr-neutral-400: hsl(var(--hsl-clr-neutral-400));
+    --clr-neutral-600: hsl(var(--hsl-clr-neutral-600));
+    --clr-neutral-800: hsl(var(--hsl-clr-neutral-800));
+    --clr-neutral-900: hsl(var(--hsl-clr-neutral-900));
+
+    --clr-neutral-100-alpha: hsla(var(--hsl-clr-neutral-100), var(--alpha));
+
+    --clr-attribution: hsla(
+        var(--hsl-clr-attribution),
+        var(--alpha-attribution)
+    );
+    --clr-attribution-link: hsl(var(--hsl-clr-attribution-link));
+
+    /* Typography */
+    --fw-thin: 100;
+    --fw-extra-light: 200;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+    --fw-black: 900;
+
+    --fs-100: 0.8rem;
+    --fs-200: 0.875rem;
+    --fs-300: 1rem;
+    --fs-400: 0.9375rem;
+    --fs-500: 1rem;
+    --fs-600: 1rem;
+    --fs-700: 1.5rem;
+    --fs-800: 3.5rem;
+    --fs-900: clamp(4rem, 10vw + 1rem, 9.375rem);
+
+    @include breakpoint-tablet {
+        --fs-400: 1rem;
+        --fs-500: 1.25rem;
+        --fs-600: 1.5rem;
+        --fs-700: 2.5rem;
+        --fs-800: 5rem;
+    }
+
+    @include breakpoint-desktop {
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-500: 1.75rem;
+        --fs-400: 1.125rem;
+        --fs-300: 1rem;
+        --fs-200: 0.875rem;
+    }
+
+    --fs-attribution: var(--fs-200);
+}

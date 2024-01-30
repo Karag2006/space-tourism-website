@@ -1,0 +1,110 @@
+@use "@/public/assets/scss/imports/mixins" as *;
+
+.grid-container--technology {
+    --flow-space: 2rem;
+
+    grid-template-areas:
+        "title"
+        "image"
+        "content";
+
+    margin-block-end: 0;
+    padding-block-end: 0;
+    padding-inline: 0;
+
+    .image-area {
+        grid-area: image;
+        justify-content: center;
+
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .tab-list {
+        --gap: 1rem;
+
+        flex-direction: row;
+
+        margin-block-start: 0;
+        padding-block-start: 2rem;
+        padding-block-end: 1.5rem;
+
+        @include breakpoint-tablet {
+            --gap: 1.5rem;
+
+            padding-block: 2.5rem;
+        }
+    }
+    .technology-info-container {
+        --gap: 0;
+        --flow-space: 0.5rem;
+        grid-area: content;
+
+        flex-direction: column;
+        align-items: center;
+
+        padding-block-end: 2rem;
+
+        @include breakpoint-tablet {
+            padding-block-end: 0;
+        }
+
+        @include breakpoint-desktop {
+            --gap: 2.5rem;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+
+            .numbered-indicators {
+                flex-direction: column;
+            }
+        }
+    }
+
+    @include breakpoint-tablet {
+        .page-title {
+            padding-inline-start: 1rem;
+        }
+    }
+
+    @include breakpoint-desktop {
+        grid-template-areas:
+            ". title title ."
+            ". content image .";
+
+        justify-items: start;
+        align-content: start;
+
+        .image-area {
+            align-self: flex-end;
+            max-width: 90%;
+        }
+    }
+}
+
+.technology-text {
+    --flow-space: 0.5rem;
+    p:not(:first-child) {
+        margin-block-start: 1rem;
+        padding-inline: 1.5rem;
+
+        @include breakpoint-tablet {
+            width: 70%;
+            margin-inline: auto;
+        }
+
+        @include breakpoint-desktop {
+            width: unset;
+            margin-inline: unset;
+            padding-inline: unset;
+            text-align: left;
+        }
+    }
+
+    @include breakpoint-tablet {
+        --flow-space: 1rem;
+    }
+}

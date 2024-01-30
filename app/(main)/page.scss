@@ -1,0 +1,19 @@
+@use "@/public/assets/scss/imports/mixins" as *;
+
+.grid-container--home {
+    p {
+        margin-block-end: 3rem;
+    }
+
+    @include breakpoint-desktop {
+        align-items: end;
+        padding-block-end: max(6rem, 15vh);
+        & > *:first-child {
+            grid-column: 2;
+        }
+
+        & > *:last-child {
+            grid-column: 3;
+        }
+    }
+}
