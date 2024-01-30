@@ -26,7 +26,7 @@ export const DotIndicators = ({
         let tabFocus = activeTab;
         // Keyboard Controls need direct access to the rendered elements
         const tabList = document.querySelector('[role="tablist"]');
-        const tabs = tabList?.querySelectorAll('[role="tab"]');
+        const tabs = tabList?.querySelectorAll<HTMLElement>('[role="tab"]');
 
         const handleKeyDown = (e: KeyboardEvent) => {
             if(!tabs || e.code !== "ArrowRight" && e.code !== "ArrowLeft")

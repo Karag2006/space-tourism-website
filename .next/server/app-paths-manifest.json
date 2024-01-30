@@ -1,5 +1,6 @@
 {
   "/(main)/crew/page": "app/(main)/crew/page.js",
   "/(main)/destination/page": "app/(main)/destination/page.js",
-  "/(main)/technology/page": "app/(main)/technology/page.js"
+  "/(main)/technology/page": "app/(main)/technology/page.js",
+  "/(main)/page": "app/(main)/page.js"
 }

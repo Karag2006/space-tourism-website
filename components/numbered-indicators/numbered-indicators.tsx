@@ -28,7 +28,7 @@ export const NumberedIndicators = ({
         let tabFocus = activeTab;
         // Keyboard Controls need direct access to the rendered elements
         const tabList = document.querySelector('[role="tablist"]');
-        const tabs = tabList?.querySelectorAll('[role="tab"]');
+        const tabs = tabList?.querySelectorAll<HTMLElement>('[role="tab"]');
 
         // 58 rem = 928 px = desktop breakpoint
         const keyNext = currentWindowWidth < 928 ? 'ArrowRight' : 'ArrowDown';
