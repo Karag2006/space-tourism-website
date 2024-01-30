@@ -15,6 +15,8 @@ const Destination = () => {
     const [activeLink, setActiveLink] = useState(0);
 
     useEffect(() => {
+        if(!document) return;
+        
         let tabFocus = activeLink;
         // Keyboard Controls need direct access to the rendered elements
         const tabList = document.querySelector('[role="tablist"]');

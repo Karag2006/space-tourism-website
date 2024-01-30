@@ -25,6 +25,8 @@ export const NumberedIndicators = ({
     let currentWindowWidth = useWindowWidth(); 
 
     useEffect(() => {
+        if(!currentWindowWidth || !window || !document) return;
+
         let tabFocus = activeTab;
         // Keyboard Controls need direct access to the rendered elements
         const tabList = document.querySelector('[role="tablist"]');
