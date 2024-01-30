@@ -125,18 +125,21 @@ const DesignSystemPage = () => {
                         <div className="tabs underline-indicators flex">
                             <button 
                                 aria-selected={true}
+                                role="tab"
                                 className="uppercase text-accent ff-sans-cond letter-spacing-2"
                             >
                                 Moon
                             </button>
                             <button 
                                 aria-selected={false}
+                                role="tab"
                                 className="uppercase text-accent ff-sans-cond letter-spacing-2"
                             >
                                 Mars
                             </button>
                             <button 
                                 aria-selected={false}
+                                role="tab"
                                 className="uppercase text-accent ff-sans-cond letter-spacing-2"
                             >
                                 Europa
@@ -148,7 +151,8 @@ const DesignSystemPage = () => {
                                 {name: "hover title"}, 
                                 {name: "idle title"}
                             ]} 
-                            setTab={(name: string) => {console.log(name)}}
+                            activeTab={0}
+                            setTab={(number: number) => {}}
                         />
                         <NumberedIndicators 
                             pages={[
@@ -156,7 +160,8 @@ const DesignSystemPage = () => {
                                 {name: "hover title"}, 
                                 {name: "idle title"}
                             ]}
-                            setTab={(name: string) => {console.log(name)}}
+                            activeTab={0}
+                            setTab={(number: number) => {}}
                         />
                     </div>
                 </div>
